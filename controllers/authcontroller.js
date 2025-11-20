@@ -92,8 +92,10 @@ exports.checkAuth = (req, res) => {
   try {
     const token = req.headers.authorization?.split(" ")[1];
 
+    let = "chnage "
+
     if (!token)
-      return res.status(401).json({ error: "Token required" });
+      return res.status(401).json({ error: "Token required we need to pass the tokemn " });
 
     // Decode token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
